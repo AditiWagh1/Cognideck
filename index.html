@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+    <title>Cognideck</title>
+</head>
+<body>
+    <section class="container">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Cognideck</span>
+            </div>
+            <button id=""studyAllBtn" class="btn btn-primary">
+                <i class="fa-solid fa-graduation-cap"></i>Study All
+            </button>
+        </header>
+        <div class="main-content">
+            <div class="flashcard-form">
+                <h2>Create New flashcard</h2>
+                <div class="form-group">
+                    <label for="flashcardtitle">Title</label>
+                    <input type="text" id="flashcardtitle" class="form-control" placeholder="Enter title...">
+                </div>
+                <div class="form-group">
+                    <label for="flashcardFront">Front Content</label>
+                    <textarea id="flashcardFront" class="form-control" placeholder="Enter front control..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="flashcardBack">Back Content</label>
+                    <textarea id="flashcardBack" class="form-control" placeholder="Enter back control..."></textarea>
+                </div>
+                <div class="form-actions">
+                    <button id="saveFlashcardBtn" class="btn btn-primary">
+                        <i class="fa-solid fa-floppy-disk"></i> Save
+                    </button>
+                    <button id="clearFormBtn" class="btn btn-outline">
+                        <i class="fa-solid fa-eraser"></i>Clear
+                    </button>
+                </div>
+            </div>
+            <div class="flashcards-section">
+            <div class="actions-bar">
+                <div class="stats" id="statsDisplay">0 flashcards</div>
+            </div>
+            <div class="flashcards-container" id="flashcardsContainer">
+                <div class="empty-state">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <h3>No Flashcards Yet</h3>
+                    <p>Create your first Flashcard!</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>   
+        <div class="study-mode" id="studyMode">
+            <div class="study-card" id="studyCard">
+                <button class="close-study" id="closeStudy">
+                    <i class="fa-solid fa-x"></i>
+                </button>
+                <div class="study-card-front">
+                    <h2 id="studyFrontTitle">Front Title</h2>
+                    <p id="studyFrontContent">Front content goes here...</p>
+                    <button class="btn btn-primary" id="flipStudyCardBtn">
+                        <i class="fa-solid fa-rotate-right"></i>
+                    </button>
+                </div>
+                <div class="study-card-back">
+                    <h2>Answer</h2>
+                    <p id="studyBackContent">Back content goes here...</p>
+                </div>
+            </div>
+        </div>
+
+    
+    <div class="toast" id="toast"></div>
+    <script src="script.js"></script>
+</body>
+</html>
